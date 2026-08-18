@@ -91,20 +91,20 @@ a {
 
 .logo-text {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
 
-    padding-bottom: 6px;
-
+    padding-bottom: 0;
     white-space: nowrap;
+    gap: 6px;
 }
 
 .logo-main {
     color: #0f172a;
     font-size: 20px;
     font-weight: 800;
-
-    line-height: 1.05;
+    line-height: 1;
     letter-spacing: .4px;
 }
 
@@ -112,8 +112,7 @@ a {
     color: #64748b;
     font-size: 16px;
     font-weight: 600;
-
-    line-height: 1.1;
+    line-height: 1;
     letter-spacing: .5px;
 }
 
