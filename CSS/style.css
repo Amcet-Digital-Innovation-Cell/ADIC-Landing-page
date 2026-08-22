@@ -1,0 +1,3308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   INDEX PAGE — consolidated from CSS/index.css
+========================================================= */
+
+html.page-index {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+html.page-index::-webkit-scrollbar {
+    display: none;
+}
+
+html.page-index body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    color: #1f2937;
+    background: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+html.page-index body::-webkit-scrollbar {
+    display: none;
+}
+
+html.page-index button, html.page-index input, html.page-index textarea, html.page-index select {
+    font-family: inherit;
+}
+
+html.page-index a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+           NAVBAR
+        ========================================================= */
+
+html.page-index .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    width: 100%;
+    min-height: 88px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 30px;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+           LOGO
+        ========================================================= */
+
+html.page-index .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    flex-shrink: 0;
+    margin-right: 25px;
+}
+
+html.page-index .adic-logo {
+    width: 72px;
+    height: 72px;
+
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+html.page-index .logo-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    white-space: nowrap;
+}
+
+html.page-index .logo-main {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 20px;
+    font-weight: 1000;
+    line-height: 1;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    background: linear-gradient(130deg,
+            #1c2680 0%,
+            #4b90e2 25%,
+            #1c2680 50%,
+            #4b90e2 75%,
+            #1c2680 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    filter: drop-shadow(0 0 8px rgba(75, 144, 226, 0.35));
+}
+
+
+
+
+/* =========================================================
+           NAVIGATION
+        ========================================================= */
+
+html.page-index .nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+    margin-left: auto;
+    padding: 0;
+
+    list-style: none;
+    flex-shrink: 0;
+}
+
+html.page-index .nav-links a {
+    position: relative;
+
+    color: #1f2937;
+
+    font-size: 17px;
+    font-weight: 600;
+
+
+    white-space: nowrap;
+
+    transition: color .3s ease;
+}
+
+html.page-index .nav-links a:hover {
+    color: #2563eb;
+}
+
+html.page-index .nav-links .active {
+    color: #2563eb;
+}
+
+html.page-index .nav-links .active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 100%;
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+}
+
+
+/* =========================================================
+           HERO
+           
+        ========================================================= */
+
+html.page-index .hero {
+    display: grid;
+
+    grid-template-columns: 45% 55%;
+
+    width: 100%;
+
+    min-height: 560px;
+
+    margin: 0;
+    padding: 0;
+
+    align-items: stretch;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+           HERO LEFT CONTENT
+        ========================================================= */
+
+html.page-index .hero-copy {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 70px 6%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    text-align: left;
+
+    background: #ffffff;
+}
+
+html.page-index .eyebrow {
+    margin-bottom: 18px;
+
+    color: #2563eb;
+
+    text-transform: uppercase;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+html.page-index .hero h1 {
+    margin: 0 0 24px;
+
+    color: #111827;
+
+    font-size: 44px;
+    font-weight: 800;
+
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+}
+
+html.page-index .blue {
+    color: #2563eb;
+}
+
+html.page-index .hero-copy>p {
+    width: 100%;
+    max-width: 580px;
+
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+           AMCET + ADIC LOGOS
+        ========================================================= */
+
+html.page-index .logo-partnership {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 22px;
+
+    margin-top: 32px;
+}
+
+html.page-index .institution-logo {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+html.page-index .institution-logo img {
+    width: 200px;
+    height: 180px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 0 7px;
+}
+
+html.page-index .institution-logo p {
+    margin: 0;
+
+    color: #1e3a8a;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    line-height: 1.3;
+    letter-spacing: .5px;
+
+    text-align: center;
+}
+
+html.page-index .logo-divider {
+    width: 1px;
+    height: 70px;
+
+    background: #cbd5e1;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+           HERO IMAGE
+           
+           IMPORTANT:
+           Image touches the hero text area directly.
+        ========================================================= */
+
+html.page-index .hero-image {
+    position: relative;
+
+    width: 100%;
+    height: 660px;
+    min-height: 660px;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+html.page-index .hero-image img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: none;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transform: scale(1.02);
+
+    filter:
+        saturate(.88) contrast(.96) brightness(.99);
+
+    transition:
+        transform .8s ease,
+        filter .8s ease;
+}
+
+
+/* =========================================================
+           HERO FADE
+
+         
+        ========================================================= */
+
+html.page-index .hero-image::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: 2;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 38%;
+
+    pointer-events: none;
+
+    background: linear-gradient(90deg,
+            #ffffff 0%,
+            rgba(255, 255, 255, .98) 8%,
+            rgba(255, 255, 255, .88) 20%,
+            rgba(255, 255, 255, .65) 35%,
+            rgba(255, 255, 255, .35) 55%,
+            rgba(255, 255, 255, .10) 78%,
+            transparent 100%);
+}
+
+html.page-index .hero-image::after {
+    content: "";
+
+    position: absolute;
+
+    z-index: 3;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(90deg,
+            rgba(255, 255, 255, .08) 0%,
+            transparent 35%,
+            rgba(37, 99, 235, .025) 100%);
+}
+
+html.page-index .hero-image:hover img {
+    transform: scale(1.04);
+
+    filter:
+        saturate(.94) contrast(1) brightness(1);
+}
+
+
+/* =========================================================
+           WHY WE EXIST
+        ========================================================= */
+
+html.page-index .why-exist {
+    width: 100%;
+
+    margin: 0;
+    padding: 0 6% 60px;
+
+    background: #ffffff;
+}
+
+html.page-index .section-title {
+    margin: 0;
+    padding: 0;
+}
+
+html.page-index .section-title p {
+    margin-top: 10px;
+
+    text-align: center;
+
+    font-size: 38px;
+    font-weight: 700;
+
+    color: #1e3a8a;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+html.page-index .why-container {
+    max-width: 1300px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+html.page-index .why-content {
+    flex: 1;
+}
+
+html.page-index .why-content p {
+    margin: 0 0 24px;
+
+    font-size: 18px;
+    line-height: 1.9;
+
+    color: #64748b;
+
+    text-align: justify;
+}
+
+html.page-index .why-content p:last-child {
+    margin-bottom: 0;
+}
+
+html.page-index .why-cards {
+    flex: 1;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+html.page-index .card {
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .05);
+
+    transition: all .35s ease;
+}
+
+html.page-index .card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 40px rgba(37, 99, 235, .15);
+}
+
+html.page-index .card i {
+    margin-bottom: 18px;
+
+    font-size: 34px;
+
+    color: #2563eb;
+}
+
+html.page-index .card h3 {
+    margin-bottom: 12px;
+
+    font-size: 22px;
+
+    color: #111827;
+}
+
+html.page-index .card p {
+    font-size: 16px;
+
+    color: #6b7280;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+           PURPOSE
+        ========================================================= */
+
+html.page-index .purpose-section {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 10px 6% 70px;
+
+    background: #ffffff;
+}
+
+html.page-index .purpose-header {
+    max-width: 800px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+html.page-index .purpose-header span {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #2563eb;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+html.page-index .purpose-header h2 {
+    margin-bottom: 18px;
+
+    font-size: 44px;
+
+    color: #0f172a;
+
+    line-height: 1.2;
+}
+
+html.page-index .purpose-header p {
+    font-size: 18px;
+
+    color: #64748b;
+
+    line-height: 1.8;
+}
+
+html.page-index .purpose-content {
+    max-width: 1300px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+html.page-index .purpose-item {
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    transition: all .35s ease;
+}
+
+html.page-index .purpose-item:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 40px rgba(37, 99, 235, .12);
+}
+
+html.page-index .purpose-item h3 {
+    margin-bottom: 18px;
+
+    font-size: 28px;
+
+    color: #2563eb;
+}
+
+html.page-index .purpose-item p {
+    color: #64748b;
+
+    line-height: 1.9;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+           JOIN ADIC
+        ========================================================= */
+
+html.page-index .join-adic {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 90px 6%;
+
+    background: #ffffff;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+html.page-index .join-left {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+}
+
+html.page-index .join-tag {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #2563eb;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+html.page-index .join-left h2 {
+    margin-bottom: 20px;
+
+    font-size: 44px;
+
+    color: #0f172a;
+
+    line-height: 1.2;
+}
+
+html.page-index .join-left p {
+    margin-bottom: 40px;
+
+    font-size: 18px;
+
+    color: #64748b;
+
+    line-height: 1.9;
+}
+
+html.page-index .join-benefits {
+    display: grid;
+
+    gap: 18px;
+}
+
+html.page-index .benefit {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    color: #0f172a;
+}
+
+html.page-index .benefit i {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 18px;
+
+    flex-shrink: 0;
+}
+
+html.page-index .join-right {
+    width: 100%;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, .08);
+
+    transition: all .35s ease;
+}
+
+html.page-index .join-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+html.page-index .input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+html.page-index .input-group label {
+    margin-bottom: 8px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #0f172a;
+}
+
+html.page-index .input-group input, html.page-index .input-group textarea, html.page-index .input-group select {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    outline: none;
+
+    transition: .3s;
+}
+
+html.page-index .input-group textarea {
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+html.page-index .input-group input:focus, html.page-index .input-group textarea:focus, html.page-index .input-group select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, .12);
+}
+
+html.page-index .join-btn {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+html.page-index .join-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+           CONTACT
+        ========================================================= */
+
+html.page-index .contact-section {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0 6% 70px;
+
+    background: #ffffff;
+}
+
+html.page-index .contact-header {
+    max-width: 750px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+html.page-index .contact-header span {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #2563eb;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+html.page-index .contact-header h2 {
+    margin-bottom: 18px;
+
+    font-size: 44px;
+
+    color: #0f172a;
+}
+
+html.page-index .contact-header p {
+    font-size: 18px;
+
+    color: #64748b;
+
+    line-height: 1.8;
+}
+
+html.page-index .contact-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+html.page-index .contact-box {
+    padding: 35px 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, .05);
+
+    transition: all .35s ease;
+}
+
+html.page-index .contact-box:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 40px rgba(37, 99, 235, .12);
+}
+
+html.page-index .contact-box i {
+    width: 70px;
+    height: 70px;
+
+    margin: auto auto 20px;
+
+    border-radius: 50%;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 28px;
+}
+
+html.page-index .contact-box h3 {
+    margin-bottom: 12px;
+
+    font-size: 22px;
+
+    color: #0f172a;
+}
+
+html.page-index .contact-box a {
+    color: #64748b;
+
+    font-size: 16px;
+
+    word-break: break-word;
+
+    transition: color .3s ease;
+}
+
+html.page-index .contact-box a:hover {
+    color: #2563eb;
+}
+
+
+/* =========================================================
+           ANIMATION
+        ========================================================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+html.page-index .why-content, html.page-index .why-cards, html.page-index .purpose-item, html.page-index .contact-box, html.page-index .join-left, html.page-index .join-right {
+    animation:
+        fadeUp .8s ease both;
+}
+
+
+/* =========================================================
+           TABLET / LAPTOP
+        ========================================================= */
+
+@media (max-width: 1200px) {
+
+    html.page-index .navbar {
+        padding: 0 20px;
+    }
+
+    html.page-index .logo {
+        margin-right: 18px;
+    }
+
+    html.page-index .adic-logo {
+        width: 62px;
+        height: 62px;
+    }
+
+    html.page-index .logo-main {
+        font-size: 16px;
+    }
+
+    html.page-index .logo-sub {
+        font-size: 9px;
+    }
+
+    html.page-index .nav-links {
+        gap: 14px;
+    }
+
+    html.page-index .nav-links a {
+        font-size: 13px;
+    }
+
+    html.page-index .hero {
+        grid-template-columns: 44% 56%;
+        min-height: 520px;
+    }
+
+    html.page-index .hero-copy {
+        padding: 60px 5%;
+    }
+
+    html.page-index .hero h1 {
+        font-size: 50px;
+    }
+
+    html.page-index .hero-copy>p {
+        font-size: 17px;
+        max-width: 520px;
+    }
+
+    html.page-index .hero-image {
+        height: 520px;
+        min-height: 520px;
+    }
+}
+
+
+/* =========================================================
+           TABLET
+        ========================================================= */
+
+@media (max-width: 992px) {
+
+    html.page-index .navbar {
+        min-height: 75px;
+        padding: 10px 18px;
+    }
+
+    html.page-index .logo {
+        margin-right: 12px;
+    }
+
+    html.page-index .adic-logo {
+        width: 52px;
+        height: 52px;
+    }
+
+    html.page-index .logo-main {
+        font-size: 14px;
+    }
+
+    html.page-index .logo-sub {
+        font-size: 8px;
+    }
+
+    html.page-index .nav-links {
+        gap: 11px;
+    }
+
+    html.page-index .nav-links a {
+        font-size: 11px;
+    }
+
+    html.page-index .hero {
+        grid-template-columns: 1fr 1fr;
+        min-height: 480px;
+    }
+
+    html.page-index .hero-copy {
+        padding: 50px 6%;
+    }
+
+    html.page-index .eyebrow {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    html.page-index .hero h1 {
+        font-size: 42px;
+        letter-spacing: -1px;
+    }
+
+    html.page-index .hero-copy>p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    html.page-index .logo-partnership {
+        gap: 16px;
+        margin-top: 25px;
+    }
+
+    html.page-index .institution-logo img {
+        width: 75px;
+        height: 52px;
+    }
+
+    html.page-index .institution-logo p {
+        font-size: 11px;
+    }
+
+    html.page-index .logo-divider {
+        height: 60px;
+    }
+
+    html.page-index .hero-image {
+        height: 480px;
+        min-height: 480px;
+    }
+
+    html.page-index .hero-image::before {
+        width: 35%;
+    }
+
+    html.page-index .why-container {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 40px;
+    }
+
+    html.page-index .why-content {
+        width: 100%;
+    }
+
+    html.page-index .why-content p {
+        text-align: center;
+    }
+
+    html.page-index .why-cards {
+        width: 100%;
+    }
+
+    html.page-index .purpose-content {
+        grid-template-columns: 1fr;
+
+        max-width: 650px;
+    }
+
+    html.page-index .purpose-header h2 {
+        font-size: 38px;
+    }
+
+    html.page-index .join-adic {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        padding: 70px 5%;
+    }
+
+    html.page-index .join-left {
+        text-align: center;
+
+        align-items: center;
+
+        max-width: 700px;
+
+        margin: 0 auto;
+    }
+
+    html.page-index .join-left p {
+        text-align: center;
+    }
+
+    html.page-index .join-benefits {
+        width: fit-content;
+
+        text-align: left;
+    }
+
+    html.page-index .join-right {
+        max-width: 700px;
+
+        margin: auto;
+    }
+
+    html.page-index .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+           MOBILE
+        ========================================================= */
+
+@media (max-width: 768px) {
+
+    html.page-index .navbar {
+        flex-direction: column;
+
+        min-height: auto;
+
+        padding: 10px 15px;
+
+        gap: 8px;
+
+        overflow: visible;
+    }
+
+    html.page-index .logo {
+        width: 100%;
+
+        justify-content: center;
+
+        margin: 0;
+    }
+
+    html.page-index .adic-logo {
+        width: 50px;
+        height: 42px;
+    }
+
+    html.page-index .logo-text {
+        padding-bottom: 0;
+    }
+
+    html.page-index .logo-main {
+        font-size: 15px;
+    }
+
+    html.page-index .logo-sub {
+        font-size: 8px;
+    }
+
+    html.page-index .nav-links {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 8px 15px;
+
+        margin: 0;
+    }
+
+    html.page-index .nav-links a {
+        font-size: 12px;
+    }
+
+
+    /* HERO */
+
+    html.page-index .hero {
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 0;
+
+        margin: 0;
+
+        text-align: center;
+
+        align-items: center;
+
+        overflow: hidden;
+    }
+
+    html.page-index .hero-copy {
+        width: 100%;
+
+        padding: 60px 20px 45px;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    html.page-index .eyebrow {
+        width: 100%;
+
+        text-align: center;
+
+        margin-bottom: 16px;
+    }
+
+    html.page-index .hero h1 {
+        width: 100%;
+
+        max-width: 600px;
+
+        margin: 0 auto 20px;
+
+        font-size: 40px;
+
+        line-height: 1.1;
+
+        text-align: center;
+    }
+
+    html.page-index .hero-copy>p {
+        width: 100%;
+
+        max-width: 560px;
+
+        margin: 0 auto;
+
+        font-size: 16px;
+
+        line-height: 1.8;
+
+        text-align: center;
+    }
+
+    html.page-index .logo-partnership {
+        width: 100%;
+
+        justify-content: center;
+
+        margin: 30px auto 0;
+
+        gap: 20px;
+    }
+
+    html.page-index .institution-logo img {
+        width: 90px;
+        height: 60px;
+    }
+
+    html.page-index .institution-logo p {
+        font-size: 11px;
+    }
+
+    html.page-index .logo-divider {
+        height: 70px;
+    }
+
+
+    /* MOBILE IMAGE */
+
+    html.page-index .hero-image {
+        width: 100%;
+
+        height: 320px;
+
+        min-height: 320px;
+
+        display: block;
+
+        order: 2;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    html.page-index .hero-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        object-position: center;
+
+        transform: scale(1.01);
+    }
+
+    html.page-index .hero-image::before {
+        top: 0;
+        left: 0;
+
+        right: 0;
+
+        bottom: auto;
+
+        width: 100%;
+
+        height: 22%;
+
+        background: linear-gradient(180deg,
+                #ffffff 0%,
+                rgba(255, 255, 255, .75) 25%,
+                rgba(255, 255, 255, .25) 60%,
+                transparent 100%);
+    }
+
+    html.page-index .hero-image::after {
+        background:
+            linear-gradient(180deg,
+                rgba(255, 255, 255, .08),
+                transparent 35%);
+    }
+
+
+    /* WHY */
+
+    html.page-index .why-exist {
+        margin: 0;
+
+        padding:
+            0 20px 70px;
+    }
+
+    html.page-index .section-title {
+        margin: 0;
+        padding: 0;
+    }
+
+    html.page-index .section-title p {
+        margin:
+            0 0 40px;
+
+        font-size: 34px;
+    }
+
+    html.page-index .why-content p {
+        font-size: 16px;
+
+        line-height: 1.8;
+    }
+
+    html.page-index .why-cards {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    html.page-index .card {
+        padding: 25px;
+
+        text-align: center;
+    }
+
+    html.page-index .card h3 {
+        font-size: 20px;
+    }
+
+    html.page-index .card p {
+        font-size: 15px;
+    }
+
+
+    /* PURPOSE */
+
+    html.page-index .purpose-section {
+        padding: 70px 20px;
+    }
+
+    html.page-index .purpose-header {
+        margin-bottom: 40px;
+    }
+
+    html.page-index .purpose-header h2 {
+        font-size: 32px;
+    }
+
+    html.page-index .purpose-header p {
+        font-size: 16px;
+    }
+
+    html.page-index .purpose-item {
+        padding: 28px;
+    }
+
+    html.page-index .purpose-item h3 {
+        font-size: 24px;
+    }
+
+    html.page-index .purpose-item p {
+        font-size: 15px;
+    }
+
+
+    /* JOIN */
+
+    html.page-index .join-adic {
+        padding: 70px 20px;
+    }
+
+    html.page-index .join-left h2 {
+        font-size: 34px;
+    }
+
+    html.page-index .join-left p {
+        font-size: 16px;
+    }
+
+    html.page-index .join-right {
+        padding: 25px;
+    }
+
+    html.page-index .join-form {
+        gap: 16px;
+    }
+
+
+    /* CONTACT */
+
+    html.page-index .contact-section {
+        padding: 70px 20px;
+    }
+
+    html.page-index .contact-header {
+        margin-bottom: 40px;
+    }
+
+    html.page-index .contact-header h2 {
+        font-size: 34px;
+    }
+
+    html.page-index .contact-header p {
+        font-size: 16px;
+    }
+
+    html.page-index .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    html.page-index .contact-box {
+        padding: 28px;
+    }
+}
+
+
+/* =========================================================
+           SMALL MOBILE
+        ========================================================= */
+
+@media (max-width: 480px) {
+
+    html.page-index .navbar {
+        padding: 10px 12px;
+    }
+
+    html.page-index .adic-logo {
+        width: 45px;
+        height: 38px;
+    }
+
+    html.page-index .logo {
+        gap: 7px;
+    }
+
+    html.page-index .logo-main {
+        font-size: 13px;
+    }
+
+    html.page-index .logo-sub {
+        font-size: 7px;
+    }
+
+    html.page-index .nav-links {
+        gap: 8px 12px;
+    }
+
+    html.page-index .nav-links a {
+        font-size: 11px;
+    }
+
+    html.page-index .hero-copy {
+        padding: 50px 16px 40px;
+    }
+
+    html.page-index .eyebrow {
+        font-size: 11px;
+
+        letter-spacing: 1.3px;
+    }
+
+    html.page-index .hero h1 {
+        font-size: 34px;
+
+        max-width: 350px;
+
+        letter-spacing: -.8px;
+    }
+
+    html.page-index .hero-copy>p {
+        font-size: 15px;
+
+        max-width: 340px;
+
+        line-height: 1.75;
+    }
+
+    html.page-index .logo-partnership {
+        gap: 14px;
+
+        margin-top: 25px;
+    }
+
+    html.page-index .institution-logo img {
+        width: 78px;
+        height: 55px;
+    }
+
+    html.page-index .institution-logo p {
+        font-size: 10px;
+    }
+
+    html.page-index .logo-divider {
+        height: 65px;
+    }
+
+    html.page-index .hero-image {
+        height: 270px;
+        min-height: 270px;
+    }
+
+    html.page-index .hero-image::before {
+        height: 18%;
+    }
+
+    html.page-index .why-exist {
+        padding: 0 16px 60px;
+    }
+
+    html.page-index .section-title p {
+        margin-bottom: 35px;
+
+        font-size: 28px;
+    }
+
+    html.page-index .why-content p {
+        font-size: 15px;
+    }
+
+    html.page-index .card {
+        padding: 22px;
+    }
+
+    html.page-index .purpose-section {
+        padding: 60px 16px;
+    }
+
+    html.page-index .purpose-header h2 {
+        font-size: 28px;
+    }
+
+    html.page-index .purpose-item {
+        padding: 24px;
+    }
+
+    html.page-index .join-adic {
+        padding: 60px 16px;
+    }
+
+    html.page-index .join-left h2 {
+        font-size: 28px;
+    }
+
+    html.page-index .join-left p {
+        font-size: 15px;
+    }
+
+    html.page-index .benefit {
+        font-size: 15px;
+
+        gap: 12px;
+    }
+
+    html.page-index .benefit i {
+        width: 40px;
+        height: 40px;
+
+        font-size: 16px;
+    }
+
+    html.page-index .join-right {
+        padding: 20px;
+    }
+
+    html.page-index .join-btn {
+        font-size: 15px;
+    }
+
+    html.page-index .contact-section {
+        padding: 60px 16px;
+    }
+
+    html.page-index .contact-header h2 {
+        font-size: 28px;
+    }
+
+    html.page-index .contact-box {
+        padding: 24px;
+    }
+
+    html.page-index .contact-box i {
+        width: 60px;
+        height: 60px;
+
+        font-size: 24px;
+    }
+
+    html.page-index .contact-box h3 {
+        font-size: 20px;
+    }
+
+    html.page-index .contact-box a {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+           EXTRA SMALL
+        ========================================================= */
+
+@media (max-width: 360px) {
+
+    html.page-index .logo-main {
+        font-size: 12px;
+    }
+
+    html.page-index .logo-sub {
+        font-size: 6px;
+    }
+
+    html.page-index .nav-links {
+        gap: 7px 9px;
+    }
+
+    html.page-index .nav-links a {
+        font-size: 10px;
+    }
+
+    html.page-index .hero-copy {
+        padding: 45px 14px 35px;
+    }
+
+    html.page-index .hero h1 {
+        font-size: 30px;
+    }
+
+    html.page-index .hero-copy>p {
+        font-size: 14px;
+    }
+
+    html.page-index .logo-partnership {
+        gap: 10px;
+    }
+
+    html.page-index .institution-logo img {
+        width: 70px;
+        height: 50px;
+    }
+
+    html.page-index .institution-logo p {
+        font-size: 9px;
+    }
+
+    html.page-index .logo-divider {
+        height: 60px;
+    }
+
+    html.page-index .hero-image {
+        height: 250px;
+        min-height: 250px;
+    }
+
+    html.page-index .section-title p, html.page-index .purpose-header h2, html.page-index .contact-header h2, html.page-index .join-left h2 {
+        font-size: 26px;
+    }
+
+    html.page-index .why-content p, html.page-index .purpose-header p, html.page-index .contact-header p, html.page-index .join-left p {
+        font-size: 15px;
+    }
+
+    html.page-index .card, html.page-index .purpose-item, html.page-index .contact-box {
+        padding: 20px;
+    }
+}
+
+/* =========================================================
+           FOOTER
+        ========================================================= */
+
+html.page-index .site-footer {
+    background: #0d1321;
+    color: #c9d1e0;
+    padding: 64px 60px 0;
+    font-family: "Inter", sans-serif;
+}
+
+html.page-index .footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Brand column */
+html.page-index .footer-brand {
+    padding-left: 150px;
+}
+
+html.page-index .footer-brand .footer-logo-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+html.page-index .footer-brand .footer-logo-sub {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    color: #4b90e2;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+html.page-index .footer-brand p {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: #8a95a8;
+    max-width: 260px;
+    margin-bottom: 16px;
+}
+
+html.page-index .footer-brand p a {
+    color: #4b90e2;
+    font-weight: 600;
+}
+
+html.page-index .footer-brand p a:hover {
+    text-decoration: underline;
+}
+
+html.page-index .footer-tagline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: #4b90e2;
+    border-left: 3px solid #4b90e2;
+    padding-left: 10px;
+}
+
+/* Column headings */
+html.page-index .footer-col h4 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4b90e2;
+    display: inline-block;
+}
+
+/* Links */
+html.page-index .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+html.page-index .footer-col ul li a {
+    font-size: 14px;
+    color: #8a95a8;
+    transition: color 0.2s, padding-left 0.2s;
+}
+
+html.page-index .footer-col ul li a:hover {
+    color: #4b90e2;
+    padding-left: 4px;
+}
+
+/* Contact column */
+html.page-index .footer-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+html.page-index .footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+html.page-index .footer-contact-icon {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    background: rgba(75, 144, 226, 0.12);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4b90e2;
+    font-size: 13px;
+}
+
+html.page-index .footer-contact-info span {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #5a6476;
+    margin-bottom: 3px;
+}
+
+html.page-index .footer-contact-info a, html.page-index .footer-contact-info p {
+    font-size: 14px;
+    color: #c9d1e0;
+    font-weight: 500;
+}
+
+html.page-index .footer-contact-info a:hover {
+    color: #4b90e2;
+}
+
+/* Bottom bar */
+html.page-index .footer-bottom {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 22px 0;
+}
+
+html.page-index .footer-bottom p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    color: #4b90e2;
+    text-align: center;
+    white-space: nowrap;
+}
+
+html.page-index .footer-bottom p span {
+    color: #4b90e2;
+
+}
+
+html.page-index .footer-socials {
+    display: flex;
+    gap: 10px;
+}
+
+html.page-index .footer-socials a {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8a95a8;
+    font-size: 14px;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+html.page-index .footer-socials a:hover {
+    background: #4b90e2;
+    color: #ffffff;
+    border-color: #4b90e2;
+}
+
+/* =========================================================
+   TECHNOLOGY DOMAINS PAGE — consolidated from CSS/domains.css
+========================================================= */
+
+/*====================================================
+                    GLOBAL RESET
+====================================================*/
+
+
+
+html.page-domains {
+    scroll-behavior:smooth;
+    overflow-x:hidden;
+}
+
+html.page-domains body {
+    font-family:Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    color:#222;
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+html.page-domains img {
+    max-width:100%;
+    display:block;
+}
+
+/*====================================================
+                    CONTAINER
+====================================================*/
+
+html.page-domains .container {
+    width:min(92%,1300px);
+    margin:auto;
+}
+
+/*====================================================
+                TECHNOLOGY DOMAINS
+====================================================*/
+
+html.page-domains .focus-areas {
+    padding:80px 0;
+    background:#fff;
+}
+
+/*====================================================
+                SECTION TITLE
+====================================================*/
+
+html.page-domains .section-title {
+    text-align:center;
+    margin-bottom:60px;
+}
+
+html.page-domains .section-title span {
+    display:inline-block;
+    color:#2563EB;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+html.page-domains .section-title h2 {
+    font-size:42px;
+    color:#0F172A;
+    font-weight:800;
+}
+
+/*====================================================
+                    GRID
+====================================================*/
+
+html.page-domains .focus-grid {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:30px;
+}
+
+/*====================================================
+                    CARD
+====================================================*/
+
+html.page-domains .focus-card {
+
+    background:#fff;
+
+    border:1px solid #E2E8F0;
+
+    border-radius:22px;
+
+    padding:35px 28px;
+
+    text-align:center;
+
+    transition:.35s ease;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.05);
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+}
+
+html.page-domains .focus-card:hover {
+
+    transform:translateY(-10px);
+
+    border-color:#2563EB;
+
+    box-shadow:0 20px 45px rgba(37,99,235,.15);
+}
+
+/*====================================================
+                    ICON
+====================================================*/
+
+html.page-domains .icon {
+
+    width:82px;
+
+    height:82px;
+
+    margin:0 auto 22px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:22px;
+
+    background:#EFF6FF;
+
+    color:#2563EB;
+
+    font-size:34px;
+
+    transition:.35s;
+}
+
+html.page-domains .focus-card:hover .icon {
+
+    background:#2563EB;
+
+    color:#fff;
+
+    transform:translateY(-4px);
+}
+
+/*====================================================
+                    TEXT
+====================================================*/
+
+html.page-domains .focus-card h3 {
+
+    font-size:22px;
+
+    color:#0F172A;
+
+    margin-bottom:15px;
+
+    font-weight:700;
+}
+
+html.page-domains .focus-card p {
+
+    color:#64748B;
+
+    font-size:15px;
+
+    line-height:1.8;
+}
+
+/*====================================================
+            LARGE LAPTOPS
+====================================================*/
+
+@media(max-width:1200px){
+
+    html.page-domains .container {
+        width:95%;
+    }
+
+    html.page-domains .focus-grid {
+        gap:24px;
+    }
+
+}
+
+/*====================================================
+                TABLETS
+====================================================*/
+
+@media(max-width:992px){
+
+    html.page-domains .focus-grid {
+
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    html.page-domains .section-title h2 {
+
+        font-size:36px;
+    }
+
+    html.page-domains .focus-card {
+
+        padding:32px 24px;
+    }
+
+}
+
+/*====================================================
+                MOBILE
+====================================================*/
+
+@media(max-width:768px){
+
+    html.page-domains .focus-areas {
+
+        padding:60px 0;
+    }
+
+    html.page-domains .focus-grid {
+
+        grid-template-columns:1fr;
+
+        gap:22px;
+    }
+
+    html.page-domains .section-title {
+
+        margin-bottom:45px;
+    }
+
+    html.page-domains .section-title span {
+
+        font-size:13px;
+    }
+
+    html.page-domains .section-title h2 {
+
+        font-size:30px;
+    }
+
+    html.page-domains .focus-card {
+
+        padding:28px 22px;
+    }
+
+    html.page-domains .icon {
+
+        width:75px;
+        height:75px;
+        font-size:30px;
+    }
+
+    html.page-domains .focus-card h3 {
+
+        font-size:20px;
+    }
+
+    html.page-domains .focus-card p {
+
+        font-size:15px;
+    }
+
+}
+
+/*====================================================
+                SMALL PHONES
+====================================================*/
+
+@media(max-width:480px){
+
+    html.page-domains .container {
+
+        width:94%;
+    }
+
+    html.page-domains .focus-areas {
+
+        padding:50px 0;
+    }
+
+    html.page-domains .section-title span {
+
+        font-size:12px;
+    }
+
+    html.page-domains .section-title h2 {
+
+        font-size:26px;
+
+        line-height:1.3;
+    }
+
+    html.page-domains .focus-card {
+
+        padding:24px 18px;
+
+        border-radius:18px;
+    }
+
+    html.page-domains .icon {
+
+        width:68px;
+        height:68px;
+        font-size:28px;
+        border-radius:18px;
+    }
+
+    html.page-domains .focus-card h3 {
+
+        font-size:19px;
+    }
+
+    html.page-domains .focus-card p {
+
+        font-size:14px;
+    }
+
+}
+
+/*====================================================
+        VERY SMALL DEVICES
+====================================================*/
+
+@media(max-width:360px){
+
+    html.page-domains .section-title h2 {
+
+        font-size:22px;
+    }
+
+    html.page-domains .focus-card {
+
+        padding:20px 16px;
+    }
+
+    html.page-domains .focus-card h3 {
+
+        font-size:18px;
+    }
+
+    html.page-domains .focus-card p {
+
+        font-size:13px;
+    }
+
+}
+
+/*====================================================
+    DESKTOP MODE ON MOBILE FIX
+====================================================*/
+
+@media screen and (max-width:980px){
+
+    html.page-domains body {
+
+        min-width:320px;
+    }
+
+    html.page-domains .focus-grid {
+
+        width:100%;
+    }
+
+    html.page-domains .focus-card {
+
+        width:100%;
+    }
+
+}
+
+/*====================================================
+                    HERO SECTION
+====================================================*/
+
+html.page-domains .hero {
+    background: linear-gradient(135deg, #2563EB 0%, #1e40af 100%);
+    color: #fff;
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+html.page-domains .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+html.page-domains .hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+html.page-domains .hero h1 {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+html.page-domains .hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    opacity: 0.95;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+html.page-domains .hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+html.page-domains .btn {
+    padding: 14px 35px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+html.page-domains .btn-primary {
+    background: #fff;
+    color: #2563EB;
+}
+
+html.page-domains .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+html.page-domains .btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+html.page-domains .btn-secondary:hover {
+    background: #fff;
+    color: #2563EB;
+}
+
+/*====================================================
+            BENEFITS SECTION
+====================================================*/
+
+html.page-domains .benefits {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+html.page-domains .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+html.page-domains .benefit-item {
+    text-align: center;
+}
+
+html.page-domains .benefit-item i {
+    font-size: 48px;
+    color: #2563EB;
+    margin-bottom: 20px;
+    display: block;
+}
+
+html.page-domains .benefit-item h4 {
+    font-size: 22px;
+    color: #0F172A;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+html.page-domains .benefit-item p {
+    color: #64748B;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/*====================================================
+            STATISTICS SECTION
+====================================================*/
+
+html.page-domains .statistics {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #2563EB 0%, #1e40af 100%);
+    color: #fff;
+    text-align: center;
+}
+
+html.page-domains .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+html.page-domains .stat-item h3 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+html.page-domains .stat-item p {
+    font-size: 16px;
+    opacity: 0.95;
+}
+
+/*====================================================
+            CTA SECTION
+====================================================*/
+
+html.page-domains .cta-section {
+    padding: 100px 0;
+    background: #fff;
+    text-align: center;
+}
+
+html.page-domains .cta-content h2 {
+    font-size: 42px;
+    color: #0F172A;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+html.page-domains .cta-content p {
+    font-size: 18px;
+    color: #64748B;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*====================================================
+            FOOTER
+====================================================*/
+
+html.page-domains .footer {
+    background: #0F172A;
+    color: #e2e8f0;
+    padding: 60px 0 30px;
+}
+
+html.page-domains .footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+html.page-domains .footer-col h4 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+html.page-domains .footer-col ul {
+    list-style: none;
+}
+
+html.page-domains .footer-col ul li {
+    margin-bottom: 12px;
+}
+
+html.page-domains .footer-col a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .3s;
+}
+
+html.page-domains .footer-col a:hover {
+    color: #2563EB;
+}
+
+html.page-domains .footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+html.page-domains .footer-social a {
+    width: 40px;
+    height: 40px;
+    background: rgba(37, 99, 235, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+html.page-domains .footer-social a:hover {
+    background: #2563EB;
+    color: #fff;
+}
+
+html.page-domains .footer-bottom {
+    border-top: 1px solid #334155;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/*====================================================
+            RESPONSIVE - BENEFITS
+====================================================*/
+
+@media(max-width: 992px){
+    html.page-domains .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    html.page-domains .hero h1 {
+        font-size: 36px;
+    }
+
+    html.page-domains .hero p {
+        font-size: 16px;
+    }
+}
+
+/*====================================================
+            RESPONSIVE - STATISTICS
+====================================================*/
+
+@media(max-width: 768px){
+    html.page-domains .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    html.page-domains .stat-item h3 {
+        font-size: 36px;
+    }
+
+    html.page-domains .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    html.page-domains .hero {
+        padding: 80px 0;
+    }
+
+    html.page-domains .hero h1 {
+        font-size: 28px;
+    }
+
+    html.page-domains .cta-section {
+        padding: 60px 0;
+    }
+
+    html.page-domains .cta-content h2 {
+        font-size: 32px;
+    }
+
+    html.page-domains .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media(max-width: 480px){
+    html.page-domains .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    html.page-domains .stat-item h3 {
+        font-size: 32px;
+    }
+
+    html.page-domains .hero h1 {
+        font-size: 24px;
+    }
+
+    html.page-domains .hero p {
+        font-size: 14px;
+    }
+
+    html.page-domains .hero-buttons {
+        gap: 10px;
+    }
+
+    html.page-domains .btn {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    html.page-domains .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    html.page-domains .cta-content h2 {
+        font-size: 26px;
+    }
+}
+/*====================================================
+                    NAVBAR
+====================================================*/
+
+html.page-domains .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    width: 100%;
+    height: 85px;
+
+    background: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 6%;
+
+    border-bottom: 1px solid #e8e8e8;
+}
+
+/*====================================================
+                    LOGO
+====================================================*/
+
+html.page-domains .logo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    flex-shrink: 0;
+}
+
+html.page-domains .college-logo {
+    height: 45px;
+    width: auto;
+}
+
+html.page-domains .college-info {
+    height: 30px;
+    width: auto;
+}
+
+html.page-domains .logo > img:last-of-type {
+    height: 52px;
+    width: auto;
+}
+
+html.page-domains .logo p {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #111827;
+}
+
+html.page-domains .vrline {
+    width: 1px;
+    height: 45px;
+    background: #d8d8d8;
+}
+
+/*====================================================
+                    NAV LINKS
+====================================================*/
+
+html.page-domains .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+html.page-domains .nav-links a {
+    color: #1f2937;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+html.page-domains .nav-links a:hover {
+    color: #2563EB;
+}
+
+html.page-domains .nav-links .active {
+    color: #2563EB;
+    position: relative;
+}
+
+html.page-domains .nav-links .active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 100%;
+    height: 3px;
+
+    border-radius: 20px;
+
+    background: #2563EB;
+}
+@media(max-width:992px){
+
+    html.page-domains .navbar {
+        height: auto;
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    html.page-domains .logo {
+        justify-content: center;
+    }
+
+    html.page-domains .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+}
+@media(max-width:768px){
+
+    html.page-domains .logo {
+        gap: 10px;
+    }
+
+    html.page-domains .college-logo {
+        height: 38px;
+    }
+
+    html.page-domains .college-info {
+        height: 22px;
+    }
+
+    html.page-domains .logo > img:last-of-type {
+        height: 42px;
+    }
+
+    html.page-domains .logo p {
+        font-size: 12px;
+    }
+
+    html.page-domains .nav-links {
+        gap: 12px;
+    }
+
+    html.page-domains .nav-links a {
+        font-size: 14px;
+    }
+}
+@media(max-width:480px){
+
+    html.page-domains .nav-links {
+        gap: 10px;
+    }
+
+    html.page-domains .nav-links a {
+        font-size: 13px;
+    }
+
+    html.page-domains .logo {
+        flex-wrap: wrap;
+    }
+
+    html.page-domains .vrline {
+        display: none;
+    }
+}
+    
+
+/* =========================================================
+   PROJECTS PAGE — consolidated from CSS/Projects.css
+========================================================= */
+
+        
+
+        html.page-projects body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fff;
+            color: #0F172A;
+            overflow-x: hidden;
+        }
+
+        /* HERO */
+
+        html.page-projects .hero {
+            padding: 70px 5% 50px;
+            text-align: center;
+        }
+
+        html.page-projects .hero-content {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        html.page-projects .hero-tag {
+            color: #2563EB;
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 14px;
+        }
+
+        html.page-projects .hero h1 {
+            font-size: clamp(42px, 6vw, 72px);
+            margin-top: 15px;
+        }
+
+        html.page-projects .hero p {
+            max-width: 700px;
+            margin: 20px auto 0;
+            line-height: 1.8;
+            color: #64748B;
+            font-size: 20px;
+        }
+
+        /* PROJECTS */
+
+        html.page-projects .projects {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+            padding: 30px 5% 70px;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        html.page-projects .project-card {
+            background: #fff;
+            border: 1px solid #E2E8F0;
+            border-radius: 20px;
+            padding: 35px;
+
+            display: flex;
+            flex-direction: column;
+
+            transition: 0.3s;
+        }
+
+        html.page-projects .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.12);
+        }
+
+        html.page-projects .status {
+            display: inline-block;
+            align-self: flex-start;
+            padding: 8px 14px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        html.page-projects .ongoing {
+            background: #DBEAFE;
+            color: #2563EB;
+        }
+
+        html.page-projects .upcoming {
+            background: #DCFCE7;
+            color: #10B981;
+        }
+
+        html.page-projects .project-card h2 {
+            margin-bottom: 15px;
+        }
+
+        html.page-projects .project-card p {
+            line-height: 1.8;
+            color: #64748B;
+        }
+
+        /* DEVELOPMENT PROGRESS */
+
+        html.page-projects .progress-info {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 16px;
+            background: #F1F5F9;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        /* PLANNING */
+
+        html.page-projects .planning-badge {
+            display: inline-block;
+            align-self: flex-start;
+            margin-top: 20px;
+            padding: 10px 16px;
+            background: #F1F5F9;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        /* TECH STACK */
+
+        html.page-projects .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: auto;
+            padding-top: 25px;
+        }
+
+        html.page-projects .tech-stack span {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            padding: 8px 14px;
+            border-radius: 50px;
+            font-size: 14px;
+        }
+
+        /* IDEA SECTION */
+
+        html.page-projects .idea-section {
+            padding: 70px 5%;
+            text-align: center;
+            background: #F8FAFC;
+        }
+
+        html.page-projects .idea-section h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        html.page-projects .idea-section p {
+            max-width: 650px;
+            margin: auto;
+            color: #64748B;
+            line-height: 1.8;
+        }
+
+        html.page-projects .idea-btn {
+            margin-top: 25px;
+            border: none;
+            background: #2563EB;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        html.page-projects .idea-btn:hover {
+            background: #1D4ED8;
+        }
+
+        /* MODAL */
+
+        html.page-projects .modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 999;
+}
+
+html.page-projects .modal:target {
+    display: flex;
+}
+
+        html.page-projects .modal-content {
+            background: #fff;
+            width: min(90%, 550px);
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 30px;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        html.page-projects .close-btn {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 28px;
+            line-height: 1;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: #0F172A;
+        }
+
+        html.page-projects .modal-content h2 {
+            margin-bottom: 20px;
+        }
+
+        /* FORM */
+
+        html.page-projects .modal-content input, html.page-projects .modal-content textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 12px;
+            border: 1px solid #CBD5E1;
+            border-radius: 10px;
+            font: inherit;
+        }
+
+        html.page-projects .modal-content textarea {
+            resize: vertical;
+        }
+
+        html.page-projects .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            background: #2563EB;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 0;
+        }
+
+        html.page-projects .submit-btn:hover {
+            background: #1D4ED8;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+
+            html.page-projects .hero {
+                padding: 60px 25px 40px;
+            }
+
+            html.page-projects .hero p {
+                font-size: 18px;
+            }
+
+            html.page-projects .projects {
+                grid-template-columns: 1fr;
+                padding: 20px 25px 60px;
+            }
+
+            html.page-projects .idea-section {
+                padding: 60px 25px;
+            }
+
+            html.page-projects .modal-content {
+                padding: 25px;
+            }
+        }
+    
+
+
+/* Shared ADIC navbar — same design as the original index page */
+html.page-index .navbar,
+html.page-domains .navbar,
+html.page-projects .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    min-height: 88px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    overflow: hidden;
+}
+
+html.page-domains .logo,
+html.page-projects .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    margin-right: 25px;
+}
+
+html.page-domains .adic-logo,
+html.page-projects .adic-logo {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+html.page-domains .logo-text,
+html.page-projects .logo-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+}
+
+html.page-domains .logo-main,
+html.page-projects .logo-main {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 20px;
+    font-weight: 1000;
+    line-height: 1;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: linear-gradient(130deg, #1c2680 0%, #4b90e2 25%, #1c2680 50%, #4b90e2 75%, #1c2680 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 8px rgba(75, 144, 226, 0.35));
+}
+
+html.page-domains .nav-links,
+html.page-projects .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: auto;
+    padding: 0;
+    list-style: none;
+    flex-shrink: 0;
+}
+
+html.page-domains .nav-links a,
+html.page-projects .nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: #1f2937;
+    font-size: 17px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: color .3s ease;
+}
+
+html.page-domains .nav-links a:hover,
+html.page-projects .nav-links a:hover { color: #2563eb; }
+html.page-domains .nav-links .active,
+html.page-projects .nav-links .active { color: #2563eb; }
+html.page-domains .nav-links .active::after,
+html.page-projects .nav-links .active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+    background: #2563eb;
+}
