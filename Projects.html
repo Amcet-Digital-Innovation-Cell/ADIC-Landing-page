@@ -1,17 +1,71 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page-projects">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADIC Projects</title>
 
-    <link rel="stylesheet" href="CSS/Projects.css">
-
-    
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <img src="assets/logo.jpeg" alt="ADIC Logo" class="adic-logo">
+
+            <div class="logo-text">
+
+                <span class="logo-main">AMCET DIGITAL INNOVATION CELL</span>
+
+            </div>
+
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#vision">
+                    Why We Exist
+                </a>
+            </li>
+
+            <li>
+                <a href="domains.html">
+                    Technology Domain
+                </a>
+            </li>
+
+            <li>
+                <a href="Projects.html" class="active">
+                    Projects
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#join">
+                    Join ADIC
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
 
     <!-- HERO -->
 
@@ -121,9 +175,9 @@
             the next solution for our campus.
         </p>
 
-        <button id="openModal" class="idea-btn">
+        <a href="#ideaModal" class="idea-btn">
             Submit Your Idea
-        </button>
+        </a>
 
     </section>
 
@@ -134,13 +188,12 @@
 
         <div class="modal-content">
 
-            <button
-                type="button"
+            <a
+                href="#"
                 class="close-btn"
-                id="closeModal"
                 aria-label="Close">
                 &times;
-            </button>
+            </a>
 
             <h2>
                 Submit Your Idea
@@ -202,41 +255,5 @@
 
     </div>
 
-
-    <!-- JAVASCRIPT -->
-
-    <script>
-
-        const modal = document.getElementById("ideaModal");
-        const openBtn = document.getElementById("openModal");
-        const closeBtn = document.getElementById("closeModal");
-
-        openBtn.addEventListener("click", () => {
-            modal.style.display = "flex";
-            document.body.style.overflow = "hidden";
-        });
-
-        closeBtn.addEventListener("click", () => {
-            modal.style.display = "none";
-            document.body.style.overflow = "";
-        });
-
-        window.addEventListener("click", (event) => {
-            if (event.target === modal) {
-                modal.style.display = "none";
-                document.body.style.overflow = "";
-            }
-        });
-
-        document.addEventListener("keydown", (event) => {
-            if (event.key === "Escape") {
-                modal.style.display = "none";
-                document.body.style.overflow = "";
-            }
-        });
-
-    </script>
-
 </body>
 </html>
-:::
