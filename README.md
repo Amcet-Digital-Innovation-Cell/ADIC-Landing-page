@@ -1,3 +1,13 @@
 # ADIC-Landing-page
 ADIC Landing page
-Add more details
+
+
+GitHub repo & Deployments
+│
+├── main
+│    └── Vercel deployment
+│         └── adic-amcet.vercel.app
+│
+└── development
+     └── Vercel deployment
+          └── adic-landing-page-dev.vercel.app
