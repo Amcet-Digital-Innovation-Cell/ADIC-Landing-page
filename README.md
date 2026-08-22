@@ -9,6 +9,6 @@ GitHub repo & Deployments
 │
 └── development
      └── Vercel deployment
-          └── adic-landing-page-dev.vercel.app
+          └── adic-dev.vercel.app
 
 The above custom domains are set in the vercel projects.
