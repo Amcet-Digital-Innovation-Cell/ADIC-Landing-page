@@ -1,7 +1,6 @@
 # ADIC-Landing-page
 ADIC Landing page
 
-
 GitHub repo & Deployments
 │
 ├── main
@@ -11,3 +10,5 @@ GitHub repo & Deployments
 └── development
      └── Vercel deployment
           └── adic-landing-page-dev.vercel.app
+
+The above custom domains are set in the vercel projects.
