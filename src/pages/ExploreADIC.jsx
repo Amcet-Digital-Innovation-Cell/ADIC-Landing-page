@@ -32,7 +32,7 @@ const memberImages = {
   "Moshina Tabasum": "/Moshina Thabusum.jpeg",
   "Prajan": "/Prajan Kumar.png",
   "Sai Niklesh": "/Sai Niklesh.jpeg",
-  "Sanjay": "/Sanjay.jpeg",
+  "Sanjay": "/Sanjay.png",
   "Santha Kumar": "/SanthaKumar.jpeg",
   "Vasanth Raj": "/Vasantharaj_S.png"
 };
