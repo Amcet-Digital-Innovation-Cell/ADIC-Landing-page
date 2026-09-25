@@ -98,9 +98,11 @@ export default function FormModal({ type = "application", onClose, onSuccess }) 
           )}
 
           {error && <p className="adic-form-error" role="alert">{error}</p>}
-          <button className="adic-form-submit" type="submit" disabled={sending}>
-            {sending ? "Submitting..." : isApplication ? "Submit Application" : "Submit Idea"} <span>↗</span>
-          </button>
+          <div className="adic-form-actions">
+            <button className="adic-form-submit" type="submit" disabled={sending}>
+              {sending ? "Submitting..." : isApplication ? "Submit Application" : "Submit Idea"} <span>↗</span>
+            </button>
+          </div>
         </form>
       </div>
     </div>

@@ -72,26 +72,52 @@ function Home() {
         <section className="hero" id="home"><div className="hero-container">
           <div className="hero-left"><p className="eyebrow">AMCET DIGITAL INNOVATION CELL</p><h1>Turning ideas into<br /><span>innovation.</span></h1><p className="hero-description">A student-driven space where technology, creativity and collaboration come together to build meaningful solutions.</p>
             <div className="hero-actions"><a href="/explore-adic" className="hero-btn primary">Explore ADIC <span>↗</span></a><button type="button" className="hero-btn secondary" onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth", block: "start" })}>Join ADIC <span>↗</span></button></div>
+            <div className="hero-stats">
+              <div className="hero-stat-item">
+                <strong>13</strong>
+                <span>Developers</span>
+              </div>
+              <span className="hero-stat-divider" aria-hidden="true" />
+              <div className="hero-stat-item">
+                <strong>05</strong>
+                <span>Projects</span>
+              </div>
+              <span className="hero-stat-divider" aria-hidden="true" />
+              <div className="hero-stat-item">
+                <strong>06</strong>
+                <span>Domains</span>
+              </div>
+            </div>
           </div><div className="hero-right"><StudentJourney /></div>
         </div></section>
 
-        <section className="foundation section" id="foundation"><div className="section-heading"><p className="section-label">OUR FOUNDATION</p><h2>Think. Build. Innovate.</h2></div>
-          <div className="foundation-grid">
-            {[['01','Think','Question problems, explore possibilities and turn ideas into meaningful concepts.','01 — THINK','/adic-join.jpg'],['02','Build','Transform concepts into practical products through technology and teamwork.','02 — BUILD','/ZippyRide.jpg'],['03','Innovate','Create solutions that make an impact beyond the classroom.','03 — INNOVATE','/Biometrics.webp']].map(([number,title,text,label,image]) => <article className="foundation-card" key={number}>
-              <div className="foundation-image"><img src={image} alt="" /><span>{label}</span></div><div className="foundation-card-body"><span className="card-number">{number}</span><h3>{title}</h3><p>{text}</p></div>
-            </article>)}
+        <section className="foundation section" id="foundation">
+          <div className="section-container">
+            <div className="section-heading"><p className="section-label">OUR FOUNDATION</p><h2>Think. Build. Innovate.</h2></div>
+            <div className="foundation-grid">
+              {[['01','Think','Question problems, explore possibilities and turn ideas into meaningful concepts.','01 — THINK','/adic-join.jpg'],['02','Build','Transform concepts into practical products through technology and teamwork.','02 — BUILD','/ZippyRide.jpg'],['03','Innovate','Create solutions that make an impact beyond the classroom.','03 — INNOVATE','/Biometrics.webp']].map(([number,title,text,label,image]) => <article className="foundation-card" key={number}>
+                <div className="foundation-image"><img src={image} alt="" /><span>{label}</span></div><div className="foundation-card-body"><span className="card-number">{number}</span><h3>{title}</h3><p>{text}</p></div>
+              </article>)}
+            </div>
           </div>
         </section>
 
-        <section className="domains section" id="domains"><div className="section-heading"><p className="section-label">TECHNOLOGY DOMAINS</p><h2>Explore where technology takes you.</h2></div>
-          <div className="domains-grid">{domains.map((domain) => <article className="domain-card" key={domain.number}><DomainVisual type={domain.type} /><div className="domain-content"><span className="domain-index">{domain.number}</span><h3>{domain.title}</h3><p>{domain.description}</p></div></article>)}</div>
+        <section className="domains section" id="domains">
+          <div className="section-container">
+            <div className="section-heading"><p className="section-label">TECHNOLOGY DOMAINS</p><h2>Explore where technology takes you.</h2></div>
+            <div className="domains-grid">{domains.map((domain) => <article className="domain-card" key={domain.number}><DomainVisual type={domain.type} /><div className="domain-content"><span className="domain-index">{domain.number}</span><h3>{domain.title}</h3><p>{domain.description}</p></div></article>)}</div>
+          </div>
         </section>
 
         <section className="about section" id="about"><div className="about-container"><div className="about-image-area"><div className="about-frame-outer"><span className="frame-corner corner-tl" /><span className="frame-corner corner-br" /><span className="frame-label">ADIC / 2026</span><div className="about-frame"><img src="/adic-join.jpg" alt="ADIC students" /></div><span className="frame-note">THINK · BUILD · INNOVATE</span></div></div>
           <div className="about-content"><p className="section-label">ABOUT ADIC</p><h2>A place to learn,<br />experiment and create.</h2><p>ADIC brings students together to explore technology, work on real-world ideas and build solutions that matter.</p><p>It is a space where curiosity becomes collaboration and learning becomes action.</p><button className="apply-btn" type="button" onClick={() => setShowForm(true)}>Apply Now <span>↗</span></button></div>
         </div></section>
 
-        <section className="projects section" id="projects"><div className="section-heading projects-heading-row"><div><p className="section-label">PROJECTS</p><h2>Ideas that became real.</h2></div><a href="/projects" className="view-projects-btn">View All Projects <span>↗</span></a></div><div className="home-projects-grid">{featuredProjects.map((project) => <ProjectPreview key={project.number} project={project} />)}</div></section>
+        <section className="projects section" id="projects">
+          <div className="section-container">
+            <div className="projects-heading-row"><div><p className="section-label">PROJECTS</p><h2>Ideas that became real.</h2></div><a href="/projects" className="view-projects-btn">View All Projects <span>↗</span></a></div><div className="home-projects-grid">{featuredProjects.map((project) => <ProjectPreview key={project.number} project={project} />)}</div>
+          </div>
+        </section>
       </main>
       <Footer />
       {showForm && <FormModal type="application" onClose={() => setShowForm(false)} onSuccess={handleApplicationSuccess} />}

@@ -4,35 +4,34 @@ import Footer from "../components/Footer";
 import "./ExploreADIC.css";
 
 const members = [
-  "Elavalagan",
+  "Elavazhagan",
   "Joel Kumar",
   "Kamalesh",
   "Logith Kannan",
-  "Lokeshwwaran",
+  "Lokeshwaran",
   "Madhumitha.T",
   "Monika.G",
   "Moshina Tabasum",
   "Prajan",
   "Sai Niklesh",
-  "Sanjay",
+  "Sanjai",
   "Santha Kumar",
-  "Vasanth Raj"
+  "Vasantha Raj"
 ];
 
 const portfolios = {};
-
 const memberImages = {
-  "Elavalagan": "/Elavazhagan.jpeg",
+  "Elavazhagan": "/Elavazhagan.jpeg",
   "Joel Kumar": "/Joel.jpeg",
   "Kamalesh": "/Kamalesh.png",
   "Logith Kannan": "/Logith Kannan.jpeg",
-  "Lokeshwwaran": "/Lokeshwaran.jpeg",
+  "Lokeshwaran": "/Lokeshwaran.jpeg",
   "Madhumitha.T": "/Madhumitha.jpeg",
   "Monika.G": "/Monika.jpeg",
   "Moshina Tabasum": "/Moshina Thabusum.jpeg",
   "Prajan": "/Prajan Kumar.png",
   "Sai Niklesh": "/Sai Niklesh.jpeg",
-  "Sanjay": "/Sanjay.png",
+  "Sanjai": "/Sanjay.png",
   "Santha Kumar": "/SanthaKumar.jpeg",
   "Vasanth Raj": "/Vasantharaj_S.png"
 };
@@ -74,92 +73,96 @@ export default function ExploreADIC() {
         </section>
 
         <section className="team-section section">
-          <div className="section-heading">
-            <p className="section-label">THE PEOPLE BEHIND ADIC</p>
-            <h2>Students who build together.</h2>
-          </div>
+          <div className="section-container">
+            <div className="section-heading">
+              <p className="section-label">THE PEOPLE BEHIND ADIC</p>
+              <h2>Students who build together.</h2>
+            </div>
 
-          <div className="member-grid">
-            {members.map((name, index) => (
-              <article className="member-card" key={name}>
-                <div className="member-top">
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <span>ADIC</span>
-                </div>
+            <div className="member-grid">
+              {members.map((name, index) => (
+                <article className="member-card" key={name}>
+                  <div className="member-top">
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <span>ADIC</span>
+                  </div>
 
-                <div className="member-avatar" aria-label={`${name} photo`}>
-                  {memberImages[name] ? (
-                    <img src={memberImages[name]} alt={name} />
+                  <div className="member-avatar" aria-label={`${name} photo`}>
+                    {memberImages[name] ? (
+                      <img src={memberImages[name]} alt={name} />
+                    ) : (
+                      name
+                        .split(" ")
+                        .map((part) => part[0])
+                        .join("")
+                        .slice(0, 2)
+                        .toUpperCase()
+                    )}
+                  </div>
+
+                  <h3>{name}</h3>
+                  <p>Student Developer</p>
+
+                  {portfolios[name] ? (
+                    <a
+                      href={portfolios[name]}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      View Portfolio <span>↗</span>
+                    </a>
                   ) : (
-                    name
-                      .split(" ")
-                      .map((part) => part[0])
-                      .join("")
-                      .slice(0, 2)
-                      .toUpperCase()
+                    <span className="portfolio-pending">Portfolio</span>
                   )}
-                </div>
-
-                <h3>{name}</h3>
-                <p>Student Developer</p>
-
-                {portfolios[name] ? (
-                  <a
-                    href={portfolios[name]}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    View Portfolio <span>↗</span>
-                  </a>
-                ) : (
-                  <span className="portfolio-pending">Portfolio</span>
-                )}
-              </article>
-            ))}
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
         <section className="explore-values section">
-          <div className="section-heading">
-            <p className="section-label">HOW WE WORK</p>
-            <h2>More than individual skills.</h2>
-          </div>
-
-          <div className="values-grid">
-            <div className="value-card">
-              <span>01</span>
-              <h3>Learn</h3>
-              <p>
-                Explore technologies through hands-on work, experimentation
-                and shared knowledge.
-              </p>
+          <div className="section-container">
+            <div className="section-heading">
+              <p className="section-label">HOW WE WORK</p>
+              <h2>More than individual skills.</h2>
             </div>
 
-            <div className="value-card">
-              <span>02</span>
-              <h3>Build</h3>
-              <p>
-                Work together on practical ideas and turn concepts into useful
-                products.
-              </p>
-            </div>
+            <div className="values-grid">
+              <div className="value-card">
+                <span>01</span>
+                <h3>Learn</h3>
+                <p>
+                  Explore technologies through hands-on work, experimentation
+                  and shared knowledge.
+                </p>
+              </div>
 
-            <div className="value-card">
-              <span>03</span>
-              <h3>Collaborate</h3>
-              <p>
-                Bring different strengths together and learn from the people
-                around you.
-              </p>
-            </div>
+              <div className="value-card">
+                <span>02</span>
+                <h3>Build</h3>
+                <p>
+                  Work together on practical ideas and turn concepts into useful
+                  products.
+                </p>
+              </div>
 
-            <div className="value-card">
-              <span>04</span>
-              <h3>Impact</h3>
-              <p>
-                Create solutions that move beyond the classroom and solve real
-                problems.
-              </p>
+              <div className="value-card">
+                <span>03</span>
+                <h3>Collaborate</h3>
+                <p>
+                  Bring different strengths together and learn from the people
+                  around you.
+                </p>
+              </div>
+
+              <div className="value-card">
+                <span>04</span>
+                <h3>Impact</h3>
+                <p>
+                  Create solutions that move beyond the classroom and solve real
+                  problems.
+                </p>
+              </div>
             </div>
           </div>
         </section>

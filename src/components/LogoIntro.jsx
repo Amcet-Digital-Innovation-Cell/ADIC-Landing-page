@@ -215,6 +215,13 @@ function LogoIntro({ onComplete }) {
   return (
     <div className="logo-intro">
       <canvas ref={canvasRef}></canvas>
+      <button
+        className="logo-intro-skip"
+        type="button"
+        onClick={() => onCompleteRef.current?.()}
+      >
+        Skip Intro ↗
+      </button>
     </div>
   );
 }
