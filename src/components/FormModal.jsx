@@ -1,7 +1,21 @@
 import { useEffect, useState } from "react";
 import "./FormModal.css";
 
-const FORM_SUBMIT_URL = "https://formsubmit.co/ajax/monikagopi3@gmail.com";
+function parseEmailList(raw) {
+  if (!raw) return [];
+  return raw
+    .split(";")
+    .map((item) => item.trim())
+    .filter((item) => item.length > 0 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(item));
+}
+
+const DEFAULT_TO_EMAIL = "monikagopi3@gmail.com";
+const toEmails = parseEmailList(import.meta.env.VITE_FORM_TO_EMAILS);
+const ccEmails = parseEmailList(import.meta.env.VITE_FORM_CC_EMAILS);
+
+const primaryToEmail = toEmails[0] || DEFAULT_TO_EMAIL;
+const ccRecipients = [...toEmails.slice(1), ...ccEmails];
+const FORM_SUBMIT_URL = `https://formsubmit.co/ajax/${primaryToEmail}`;
 
 export default function FormModal({ type = "application", onClose, onSuccess }) {
   const isApplication = type === "application";
@@ -33,10 +47,15 @@ export default function FormModal({ type = "application", onClose, onSuccess }) 
     setSending(true);
 
     try {
+      const formData = new FormData(form);
+      if (ccRecipients.length > 0) {
+        formData.append("_cc", ccRecipients.join(","));
+      }
+
       const response = await fetch(FORM_SUBMIT_URL, {
         method: "POST",
         headers: { Accept: "application/json" },
-        body: new FormData(form),
+        body: formData,
       });
 
       if (!response.ok) throw new Error("Submission failed");
