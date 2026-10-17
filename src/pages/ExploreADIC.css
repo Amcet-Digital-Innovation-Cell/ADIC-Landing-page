@@ -1,703 +1,344 @@
 /* =========================================================
-   EXPLORE ADIC PAGE
-========================================================= */
+   ADIC — EXPLORE ADIC PAGE (COMPACT & BALANCED)
+   ========================================================= */
 
 .explore-page {
-    width: 100%;
-    min-width: 0;
-
-    background: #fff;
-    color: #0b132b;
-
-    font-family: "Inter", sans-serif;
-
-    overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: var(--navy);
+  display: flex;
+  flex-direction: column;
 }
 
-.explore-page *,
-.explore-page *::before,
-.explore-page *::after {
-    box-sizing: border-box;
+.explore-page > main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
 }
 
-
-/* =========================================================
-   COMMON SECTION
-========================================================= */
-
-.section {
-    width: 100%;
-    padding: 5px 6vw;
-}
-
-.section-heading {
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.section-heading h2 {
-    margin: 0;
-
-    font-size: clamp(38px, 4vw, 54px);
-    line-height: 1.04;
-    letter-spacing: -0.045em;
-}
-
-.section-label {
-    margin: 0 0 9px;
-
-    font-size: 10px;
-    font-weight: 800;
-
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-
-    color: #0066ff;
-}
-
-
-/* =========================================================
+/* =========================
    EXPLORE HERO
-========================================================= */
+========================= */
 
 .explore-hero {
-    width: 100%;
-    min-height: 310px;
-
-    padding: 5px 8vw;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    background: linear-gradient(
-        135deg,
-        #f8fafc,
-        #eef6ff
-    );
+  position: relative;
+  width: 100%;
+  padding: clamp(20px, 3vw, 36px) var(--container-pad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #f8fafc 0%, #eef6ff 100%);
+  border-bottom: 1px solid var(--line);
 }
 
 .explore-hero > div {
-    width: 100%;
-    max-width: 1200px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    min-width: 0;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .explore-hero h1 {
-    width: 100%;
-    max-width: 100%;
-
-    margin: 0;
-
-    font-size: clamp(48px, 7vw, 88px);
-    line-height: 0.94;
-
-    letter-spacing: -0.065em;
-
-    white-space: nowrap;
+  margin: 0;
+  font-size: var(--h1-fluid);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+  color: var(--navy);
 }
 
 .explore-hero h1 span {
-    color: #0066ff;
+  color: var(--blue);
 }
 
 .explore-hero p:not(.section-label) {
-    width: 100%;
-    max-width: 620px;
-
-    margin: 24px auto 0;
-
-    color: #64748b;
-
-    font-size: 14px;
-    line-height: 1.75;
+  max-width: 540px;
+  margin: 12px auto 0;
+  color: var(--slate);
+  font-size: var(--text-base);
+  line-height: 1.65;
 }
 
-
-/* =========================================================
-   STATS
-========================================================= */
+/* =========================
+   STATS BAR
+========================= */
 
 .explore-stats {
-    width: 100%;
-
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-
-    border-top: 1px solid #dce5ef;
-    border-bottom: 1px solid #dce5ef;
-
-    background: #fff;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-bottom: 1px solid var(--line);
+  background: #ffffff;
 }
 
 .explore-stats > div {
-    min-width: 0;
-
-    padding: 22px 6vw;
-
-    border-right: 1px solid #dce5ef;
-
-    text-align: center;
+  padding: clamp(14px, 2vw, 24px) var(--container-pad);
+  text-align: center;
+  border-right: 1px solid var(--line);
 }
 
 .explore-stats > div:last-child {
-    border-right: 0;
+  border-right: 0;
 }
 
 .explore-stats strong {
-    display: block;
-
-    color: #0066ff;
-
-    font-size: 40px;
-    line-height: 1;
-
-    letter-spacing: -0.06em;
+  display: block;
+  color: var(--blue);
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-weight: 800;
 }
 
 .explore-stats span {
-    display: block;
-
-    margin-top: 9px;
-
-    color: #64748b;
-
-    font-size: 8px;
-    font-weight: 800;
-
-    letter-spacing: 0.14em;
-
-    overflow-wrap: anywhere;
+  display: block;
+  margin-top: 6px;
+  color: var(--slate);
+  font-size: var(--text-badge);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
-
-/* =========================================================
-   TEAM
-========================================================= */
+/* =========================
+   TEAM SECTION & GRID
+========================= */
 
 .team-section {
-    padding-top: 5px;
-    padding-bottom: 5px;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--section-vpad) var(--container-pad);
 }
 
 .member-grid {
-    width: 100%;
-
-    display: grid;
-
-    grid-template-columns: repeat(
-        4,
-        minmax(0, 1fr)
-    );
-
-    gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(12px, 1.8vw, 18px);
 }
 
 .member-card {
-    position: relative;
-
-    min-width: 0;
-    min-height: 245px;
-
-    padding: 18px;
-
-    border: 1px solid #dce5ef;
-
-    background: #fff;
-
-    text-align: center;
-
-    transition:
-        transform 0.25s ease,
-        border-color 0.25s ease,
-        box-shadow 0.25s ease;
-
-    overflow: hidden;
+  position: relative;
+  min-width: 0;
+  padding: 16px 14px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .member-card:hover {
-    transform: translateY(-4px);
-
-    border-color: #9dc4ef;
-
-    box-shadow:
-        0 18px 45px rgba(0, 102, 255, 0.09);
+  transform: translateY(-4px);
+  border-color: #9dc4ef;
+  box-shadow: var(--shadow-lg);
 }
 
 .member-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    color: #94a3b8;
-
-    font-size: 8px;
-    font-weight: 800;
-
-    letter-spacing: 0.12em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #94a3b8;
+  font-size: var(--text-badge);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  margin-bottom: 10px;
 }
 
 .member-avatar {
-    width: 78px;
-    height: 78px;
-
-    margin: 26px auto 20px;
-
-    border-radius: 50%;
-
-    display: grid;
-    place-items: center;
-
-    background: linear-gradient(
-        135deg,
-        #0b132b,
-        #0066ff
-    );
-
-    color: #fff;
-
-    font-size: 18px;
-    font-weight: 800;
-
-    letter-spacing: 0.05em;
-
-    box-shadow:
-        0 12px 25px rgba(0, 102, 255, 0.15);
-
-    overflow: hidden;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--line);
+  background: var(--soft-blue);
+  color: var(--blue);
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 10px;
 }
 
 .member-avatar img {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .member-card h3 {
-    margin: 0;
-
-    font-size: 20px;
-
-    line-height: 1.2;
-
-    letter-spacing: -0.04em;
-
-    overflow-wrap: anywhere;
+  margin: 0;
+  font-size: clamp(15px, 1.3vw, 17px);
+  line-height: 1.25;
+  color: var(--navy);
+  font-weight: 700;
 }
 
 .member-card p {
-    margin: 6px 0 0;
-
-    color: #64748b;
-
-    font-size: 10px;
+  margin: 3px 0 10px;
+  color: var(--slate);
+  font-size: var(--text-xs);
 }
 
 .member-card a,
 .portfolio-pending {
-    display: inline-flex;
-    align-items: center;
-
-    margin-top: 22px;
-
-    font-size: 9px;
-    font-weight: 800;
-
-    letter-spacing: 0.08em;
-
-    text-transform: uppercase;
+  margin-top: auto;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 4px;
 }
 
 .member-card a {
-    color: #0066ff;
-
-    text-decoration: none;
+  color: var(--blue);
+  background: var(--soft-blue);
+  transition: background 0.2s ease;
 }
 
-.member-card a span {
-    margin-left: 8px;
+.member-card a:hover {
+  background: #dbeafe;
 }
 
 .portfolio-pending {
-    color: #94a3b8;
+  color: #94a3b8;
+  background: #f1f5f9;
+  cursor: default;
 }
 
-
-/* =========================================================
-   VALUES
-========================================================= */
+/* =========================
+   VALUES SECTION
+========================= */
 
 .explore-values {
-    padding-top: 5px;
-    padding-bottom: 5px;
-
-    background: #f8fafc;
+  background: #f8fafc;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
 .values-grid {
-    width: 100%;
-
-    display: grid;
-
-    grid-template-columns: repeat(
-        4,
-        minmax(0, 1fr)
-    );
-
-    gap: 15px;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(12px, 1.8vw, 20px);
 }
 
 .value-card {
-    min-width: 0;
-    min-height: 210px;
-
-    padding: 25px;
-
-    border-top: 2px solid #0066ff;
-
-    background: #fff;
+  padding: 18px 16px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
 }
 
 .value-card span {
-    font-size: 9px;
-
-    color: #0066ff;
-
-    font-weight: 800;
+  font-size: var(--text-badge);
+  font-weight: 800;
+  color: var(--blue);
+  letter-spacing: 0.14em;
 }
 
 .value-card h3 {
-    margin: 28px 0 10px;
-
-    font-size: 28px;
-
-    line-height: 1.05;
-
-    letter-spacing: -0.04em;
+  margin: 6px 0 4px;
+  font-size: 18px;
+  color: var(--navy);
 }
 
 .value-card p {
-    margin: 0;
-
-    color: #64748b;
-
-    font-size: 11px;
-    line-height: 1.7;
+  color: var(--slate);
+  font-size: var(--text-sm);
+  line-height: 1.55;
 }
 
-
-/* =========================================================
-   CTA
-========================================================= */
+/* =========================
+   EXPLORE CTA
+========================= */
 
 .explore-cta {
-    padding: 5px 6vw;
-
-    background: #0b132b;
-
-    color: #fff;
-
-    text-align: center;
-}
-
-.explore-cta .section-label {
-    color: #00d2ff;
+  padding: var(--section-vpad) var(--container-pad);
+  text-align: center;
+  background: #ffffff;
 }
 
 .explore-cta h2 {
-    margin: 0;
-
-    color: #fff;
-
-    font-size: clamp(44px, 6vw, 72px);
-
-    line-height: 0.96;
-
-    letter-spacing: -0.06em;
+  margin: 0;
+  font-size: var(--h2-fluid);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  color: var(--navy);
 }
 
 .explore-cta h2 span {
-    color: #00d2ff;
+  color: var(--blue);
 }
 
 .explore-cta a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-top: 25px;
-
-    min-height: 44px;
-
-    padding: 0 18px;
-
-    gap: 10px;
-
-    background: #0066ff;
-
-    color: #fff;
-
-    font: 800 10px "Inter", sans-serif;
-
-    text-decoration: none;
-
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+  height: 44px;
+  padding: 0 24px;
+  background: var(--navy);
+  color: #ffffff;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  border-radius: 6px;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .explore-cta a:hover {
-    background: #00aee8;
-
-    transform: translateY(-1px);
+  background: #14224d;
+  transform: translateY(-2px);
 }
 
-.explore-cta a span {
-    font-size: 15px;
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+  .member-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
+@media (max-width: 768px) {
+  .member-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
 
-/* =========================================================
-   TABLET
-========================================================= */
+  .explore-stats {
+    grid-template-columns: 1fr;
+  }
 
-@media (max-width: 950px) {
+  .explore-stats > div {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 14px var(--container-pad);
+  }
 
-    .member-grid {
-        grid-template-columns: repeat(
-            2,
-            minmax(0, 1fr)
-        );
-    }
-
-    .values-grid {
-        grid-template-columns: repeat(
-            2,
-            minmax(0, 1fr)
-        );
-    }
+  .explore-stats > div:last-child {
+    border-bottom: 0;
+  }
 }
 
-
-/* =========================================================
-   SMALL TABLET
-========================================================= */
-
-@media (max-width: 760px) {
-
-    .explore-hero {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    .explore-hero h1 {
-        white-space: normal;
-    }
-
-    .explore-stats > div {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .section {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .explore-hero {
-        min-height: 285px;
-
-        padding: 5px 20px;
-    }
-
-    .explore-hero h1 {
-        white-space: normal;
-
-        font-size: clamp(
-            42px,
-            12vw,
-            60px
-        );
-    }
-
-    .explore-hero p:not(.section-label) {
-        margin-top: 18px;
-
-        font-size: 13px;
-    }
-
-    .explore-stats > div {
-        padding: 22px 8px;
-    }
-
-    .explore-stats strong {
-        font-size: 30px;
-    }
-
-    .explore-stats span {
-        font-size: 7px;
-
-        line-height: 1.4;
-    }
-
-    .member-grid,
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .member-card {
-        min-height: 225px;
-    }
-
-    .team-section {
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-
-    .explore-values {
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-
-    .explore-cta {
-        padding: 5px 20px;
-    }
-
-    .explore-cta a {
-        max-width: 100%;
-    }
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 430px) {
-
-    .explore-hero {
-        min-height: 275px;
-    }
-
-    .explore-hero h1 {
-        font-size: clamp(
-            40px,
-            12vw,
-            54px
-        );
-    }
-
-    .explore-hero p:not(.section-label) {
-        max-width: 340px;
-    }
-
-    .explore-stats > div {
-        padding: 18px 5px;
-    }
-
-    .explore-stats strong {
-        font-size: 27px;
-    }
-
-    .explore-stats span {
-        font-size: 6.5px;
-        letter-spacing: 0.1em;
-    }
-
-    .member-card {
-        padding: 16px;
-    }
-
-    .value-card {
-        min-height: 190px;
-        padding: 22px;
-    }
-
-    .value-card h3 {
-        margin-top: 22px;
-    }
-}
-
-
-/* =========================================================
-   VERY SMALL MOBILE
-========================================================= */
-
-@media (max-width: 360px) {
-
-    .section {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .explore-hero {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .explore-hero h1 {
-        font-size: 39px;
-    }
-
-    .explore-hero p:not(.section-label) {
-        font-size: 12px;
-    }
-
-    .explore-stats > div {
-        padding-left: 3px;
-        padding-right: 3px;
-    }
-
-    .explore-stats strong {
-        font-size: 25px;
-    }
-
-    .explore-stats span {
-        font-size: 6px;
-    }
-
-    .member-card {
-        padding: 14px;
-    }
-
-    .value-card {
-        padding: 19px;
-    }
-
-    .explore-cta {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .member-card,
-    .explore-cta a {
-        transition: none;
-    }
+@media (max-width: 480px) {
+  .member-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
 }
